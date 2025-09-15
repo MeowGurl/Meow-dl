@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meow DL</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bg-animated"></div>
+<header class="site-header">
+<div class="brand">
+<div class="cat-wrap">
+<svg viewBox="0 0 128 128" width="56" height="56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs>
+<linearGradient id="g" x1="0" x2="1">
+<stop offset="0" stop-color="#FFB6C1"/>
+<stop offset="1" stop-color="#A78BFA"/>
+</linearGradient>
+</defs>
+<path fill="url(#g)" d="M64 12c-9-12-28-12-40 0-6 7-8 18-6 28 2 12 8 28 24 36 10 6 18 6 18 6s8 0 18-6c16-8 22-24 24-36 2-10 0-21-6-28-12-12-31-12-40 0z"/>
+<circle fill="#1F2937" cx="48" cy="56" r="6"/>
+<circle fill="#1F2937" cx="80" cy="56" r="6"/>
+<path fill="#111827" d="M64 76c-8 0-16 6-16 10v4h32v-4c0-4-8-10-16-10z"/>
+</svg>
+</div>
+<h1>Meow DL</h1>
+</div>
+</header>
+<main class="container">
+<section class="hero">
+<div class="hero-left">
+<h2>Fast YouTube downloads</h2>
+<p class="lead">Paste a YouTube link, pick audio or video, then download. Clean, fast, aesthetic.</p>
+<div class="input-row">
+<input id="pasteInput" class="input" placeholder="Paste YouTube link or search history..." type="text" />
+<button id="submitBtn" class="btn primary">Fetch</button>
+</div>
+<div class="controls-row">
+<div class="format">
+<label class="radio">
+<input type="radio" name="format" value="mp4" checked />
+<span>Video</span>
+</label>
+<label class="radio">
+<input type="radio" name="format" value="m4a" />
+<span>Audio</span>
+</label>
+</div>
+<div id="qualityWrap" class="quality">
+<select id="qualitySelect" class="select">
+<option value="144">144p</option>
+<option value="240">240p</option>
+<option value="360">360p</option>
+<option value="480" selected>480p</option>
+<option value="720">720p</option>
+<option value="1080">1080p</option>
+</select>
+</div>
+</div>
+</div>
+<div class="hero-right">
+<div class="search-box">
+<input id="searchInput" class="input search" placeholder="Search history..." type="text" />
+</div>
+<div class="history-list">
+<h4>History</h4>
+<ul id="historyList"></ul>
+</div>
+</div>
+</section>
+<section id="result" class="result hidden">
+<div class="result-card">
+<img id="thumb" class="thumb" src="" alt="thumbnail" />
+<div class="meta">
+<h3 id="title"></h3>
+<p id="channel" class="muted"></p>
+<p id="qualityLabel" class="muted"></p>
+<p id="filename" class="muted small"></p>
+<div class="result-actions">
+<button id="audioBtn" class="btn">Download Audio</button>
+<button id="videoBtn" class="btn">Download Video</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<p>Copyright ©️ Priyanshi Kaur | Open Source Project <a href="https://github.com/MeowGurl/Meow-dl" target="_blank" rel="noopener">Meow-dl</a> | Code With @MeowGurl And GPT-5</p>
+</footer>
+<script type="module" src="/assets/downloader.js"></script>
+</body>
+</html>

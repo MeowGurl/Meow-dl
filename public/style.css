@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --primary: #27243A;
+  --accent: #AD53F7;
+  --background: #191726;
+  --text: #F6F6F8;
+  --card: #232037;
+  --shadow: 0 4px 24px rgba(57,16,85,0.12);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 48px;
+  height: 48px;
+}
+
+.background-animation {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  animation: gradientMove 18s infinite linear;
+  background: linear-gradient(120deg, #AD53F7, #4D9DED 45%, #27243A 80%);
+  opacity: 0.48;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0 0;}
+  100% { background-position: 100vw 100vh;}
+}
+
+main {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.downloader {
+  background: var(--card);
+  padding: 32px;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  margin-top: 40px;
+  min-width: 340px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#search-input, #url-input {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1.07em;
+  background: var(--background);
+  color: var(--text);
+  outline: none;
+}
+
+#search-btn, #submit-btn {
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 0 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.22s;
+  height: 40px;
+}
+
+#search-btn:hover, #submit-btn:hover {
+  background: #DE64F7;
+}
+
+.format-options {
+  display: flex;
+  gap: 22px;
+  margin-top: 12px;
+}
+
+.format-options label {
+  font-size: 1.07em;
+  cursor: pointer;
+}
+
+#video-details {
+  margin-top: 18px;
+  border-radius: 12px;
+  background: var(--background);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#video-details.active {
+  display: flex;
+}
+
+#video-details img {
+  border-radius: 12px;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+#settings-btn {
+  width: 32px;
+  height: 32px;
+  background: url("/public/settings.svg") no-repeat center;
+  background-size: 60%;
+  border: none;
+  cursor: pointer;
+}
+
+dialog {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 24px;
+  min-width: 280px;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 0 !important;
+    max-width: 98vw;
+  }
+  .downloader {
+    padding: 18px;
+    margin-top: 12px;
+    min-width: unset;
+  }
+}

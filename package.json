@@ -1,0 +1,19 @@
+{
+  "name": "meow-dl",
+  "version": "1.0.0",
+  "description": "Modern YouTube Downloader Website",
+  "scripts": {
+    "dev": "bun run scripts/downloader.ts",
+    "start": "bun run scripts/downloader.ts"
+  },
+  "dependencies": {
+    "axios": "^1.8.0"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "typescript": "^5.2.0"
+  },
+  "keywords": ["youtube", "downloader", "audio", "video", "bunjs", "modern", "anime", "cat", "responsive", "api"],
+  "author": "MeowGurl",
+  "license": "MIT"
+}

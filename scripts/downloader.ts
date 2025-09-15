@@ -1,4 +1,4 @@
-import anime from 'animejs';
+import * as anime from 'animejs';
 import Fuse from 'fuse.js';
 
 type ApiResponse = {

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meow DL — YouTube Downloader</title>
+  <link rel="icon" href="/public/cat-logo.svg">
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <main id="main-container">
+    <header>
+      <div class="logo-container">
+        <img src="/public/cat-logo.svg" alt="Meow DL logo" id="logo">
+        <h1>Meow DL</h1>
+      </div>
+      <nav>
+        <button id="settings-btn"></button>
+      </nav>
+    </header>
+    <section class="background-animation"></section>
+    <section class="downloader">
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search YouTube or paste link...">
+        <button id="search-btn">Search</button>
+      </div>
+      <form id="download-form">
+        <input type="text" id="url-input" placeholder="Paste YouTube link...">
+        <button type="submit" id="submit-btn">Fetch</button>
+        <div class="format-options">
+          <label>
+            <input type="radio" name="format" value="mp4" checked>
+            Video
+          </label>
+          <label>
+            <input type="radio" name="format" value="m4a">
+            Audio
+          </label>
+        </div>
+      </form>
+      <div id="video-details"></div>
+    </section>
+  </main>
+  <dialog id="settings-modal">
+    <form id="settings-form">
+      <h2>Settings</h2>
+      <label>
+        Runtime:
+        <select name="runtime" id="runtime-select">
+          <option value="bunjs">bunjs</option>
+          <option value="nodejs">nodejs</option>
+        </select>
+      </label>
+      <label>
+        Version:
+        <select name="version" id="version-select">
+          <option value="latest">latest</option>
+        </select>
+      </label>
+    </form>
+  </dialog>
+  <script type="module" src="/scripts/downloader.ts"></script>
+</body>
+</html>
